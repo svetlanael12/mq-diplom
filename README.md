@@ -1,0 +1,1 @@
+# mq-diplom.github.io
