@@ -91,7 +91,7 @@ body {
   width: 1.4em;
   height: 1em;
   border: none;
-  
+
   margin-right: 35px;
   padding: 0;
 
@@ -209,7 +209,8 @@ body {
   min-height: 19.75vw;
   display: flex;
   align-items: flex-end;
-  width: calc(25% - 0.1%);
+  width: calc(25% - 1px);
+  margin-right: 1px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -218,8 +219,8 @@ body {
   z-index: 0;
 }
 
-.block-trend:not(:last-child) {
-  margin-right: 1px;
+.block-trend:last-child {
+  margin-right: 0px;
 }
 
 .block-trend::after {
@@ -965,13 +966,17 @@ body {
     height: 31.77vw;
   }
 
+  .block-trend:nth-child(even) {
+    margin-right: 0px;
+  }
+
   .block-trend:nth-child(n + 1) {
     margin-bottom: 1px;
   }
 
   .cards-products {
-  padding-left: 50px;
-  padding-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .card-product {
@@ -1071,7 +1076,8 @@ body {
   .block-trend {
     width: 100%;
     height: 63.8vw;
-    margin-bottom: 0.3%;
+    margin-bottom: 1px;
+    margin-right: 0px;
   }
 
   .block-trend:last-child {
