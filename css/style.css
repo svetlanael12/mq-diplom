@@ -21,6 +21,8 @@ body {
 
 .header {
   width: 100%;
+  padding-top: 35px;
+  padding-bottom: 145px;
   background-image: url("../img/banner-bg.jpg");
 
   background-repeat: no-repeat;
@@ -56,11 +58,10 @@ body {
 
 .header-logo {
   display: block;
-  margin-top: 35px;
 }
 
 .nav {
-  margin-top: 45px;
+  margin-top: 10px;
 }
 
 .nav__link {
@@ -77,6 +78,10 @@ body {
   margin-right: 0;
 }
 
+.nav__link:hover {
+  text-decoration: underline;
+}
+
 .menu-burger {
   position: absolute;
   right: 0;
@@ -86,7 +91,7 @@ body {
   width: 1.4em;
   height: 1em;
   border: none;
-  margin-top: 50px;
+  
   margin-right: 35px;
   padding: 0;
 
@@ -134,7 +139,6 @@ body {
 .header-title {
   width: 700px;
   margin: 100px auto auto;
-  padding-bottom: 145px;
 
   text-align: center;
   text-transform: uppercase;
@@ -164,7 +168,7 @@ body {
   text-transform: uppercase;
 }
 
-.new-post__title::before {
+.new-post__title::after {
   display: block;
   position: absolute;
   content: "";
@@ -202,7 +206,7 @@ body {
 }
 
 .block-trend {
-  height: 19.75vw;
+  min-height: 19.75vw;
   display: flex;
   align-items: flex-end;
   width: calc(25% - 0.1%);
@@ -215,7 +219,7 @@ body {
 }
 
 .block-trend:not(:last-child) {
-  margin-right: 0.1%;
+  margin-right: 1px;
 }
 
 .block-trend::after {
@@ -274,6 +278,11 @@ body {
   margin: auto;
 }
 
+.containers {
+  max-width: 760px;
+  padding-right: 30px;
+}
+
 .entry {
   display: flex;
   justify-content: space-between;
@@ -282,7 +291,6 @@ body {
 
 .entry__text {
   margin-left: 30px;
-  margin-right: 30px;
 }
 
 .title-entry {
@@ -305,7 +313,7 @@ body {
 }
 
 .entry__datetime {
-  padding-right: 15px;
+  margin-right: 15px;
   color: #9b9b9b;
 }
 
@@ -402,7 +410,7 @@ body {
 }
 
 .search-group {
-  width: 83%;
+  width: 100%;
 }
 
 .visually-hidden {
@@ -428,15 +436,16 @@ body {
 }
 
 .search-button {
-  width: 17%;
+  width: 50px;
   height: 50px;
+  flex-shrink: 0;
   border: none;
 
   background-color: #b59f5b;
   background-image: url("../svg/search.svg");
   background-repeat: no-repeat;
   background-size: 19px;
-  background-position: left 13px center;
+  background-position: left 15px center;
   cursor: pointer;
 }
 
@@ -558,18 +567,24 @@ body {
   margin-top: 38px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .card-product {
-  width: 292px;
+  width: 30%;
   display: flex;
   flex-direction: column;
 }
 
+.card-product__img {
+  width: 100%;
+}
+
 .card-product__description {
-  width: 338px;
   margin-top: -30px;
   margin-left: -23px;
+  margin-right: -23px;
   padding: 40px 19px 24px;
   border: 3px solid #b59f5b;
   flex-grow: 1;
@@ -625,8 +640,8 @@ body {
 
 .footer {
   max-width: 1200px;
-  background-color: #f4f7f6;
   margin: 64px auto 0;
+  padding-bottom: 23px;
   justify-content: space-around;
 }
 
@@ -634,6 +649,7 @@ body {
   max-width: 1200px;
   display: flex;
   justify-content: center;
+  background-color: #f4f7f6;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -687,8 +703,7 @@ body {
 .copyright {
   display: flex;
   justify-content: center;
-  padding-top: 73px;
-  padding-bottom: 40px;
+  margin-top: 23px;
   background-color: #ffffff;
 }
 
@@ -925,9 +940,9 @@ body {
     margin: 0 35px;
   }
 
-  .products {
-    margin-left: 35px;
-    margin-right: 35px;
+  .footer {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -937,9 +952,6 @@ body {
     margin-left: 30px;
   }
 
-  .header-logo {
-    margin-top: 40px;
-  }
   .title-white {
     font-size: 1.0625rem;
   }
@@ -949,24 +961,21 @@ body {
   }
 
   .block-trend {
-    width: calc(50% - 0.1%);
+    width: calc(50% - 1px);
     height: 31.77vw;
   }
 
   .block-trend:nth-child(n + 1) {
-    margin-bottom: 0.1%;
+    margin-bottom: 1px;
   }
 
-  .footer {
-    max-width: 1000px;
-    margin-left: 35px;
-    margin-right: 35px;
-  }
-}
-
-@media (min-width: 767px) and (max-width: 1056px) {
   .cards-products {
-    max-width: 768px;
+  padding-left: 50px;
+  padding-right: 50px;
+  }
+
+  .card-product {
+    width: 45%;
   }
 
   .card-product:last-child {
@@ -987,6 +996,7 @@ body {
 
   .header {
     background-image: url("../img/banner-bg-tablet.jpg");
+    padding-top: 50px;
   }
 
   .header-title {
@@ -1020,9 +1030,10 @@ body {
   }
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header {
     background-image: url("../img/banner-mobile.jpg");
+    padding-top: 30px;
   }
 
   .post-trend__title {
@@ -1069,18 +1080,19 @@ body {
 
   .container {
     flex-direction: column;
-    width: 320px;
+    width: 90%;
     margin: auto;
   }
 
   .containers {
     margin-right: auto;
     margin-left: auto;
+    padding-right: 0;
   }
 
   .entry {
     flex-direction: column;
-    width: 327px;
+    width: 100%;
     padding-bottom: 22px;
     border-bottom: 3px solid #eeeeee;
   }
@@ -1110,36 +1122,21 @@ body {
     width: 100%;
   }
 
-  .search-group {
-    width: 86%;
-  }
-
   .search-field {
     width: 100%;
   }
 
-  .search-button {
-    width: 14%;
-  }
-
-  .products {
-    width: 290px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
   .cards-products {
-    margin-right: auto;
-    margin-left: auto;
-    width: 290px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
-  .card-product__img {
-    max-width: 100%;
-  }
+
   .card-product {
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
   }
+
   .card-product:not(:first-child) {
     margin-top: 25px;
   }
@@ -1150,53 +1147,5 @@ body {
 
   .popup__close {
     font-size: 15px;
-  }
-
-  .footer {
-    max-width: 700px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 400px) {
-  .container {
-    width: 100%;
-  }
-  .containers {
-    max-width: 315px;
-    margin: auto;
-  }
-  .container__2 {
-    width: 315px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .entry {
-    max-width: 315px;
-  }
-
-  .entry__image {
-    max-width: 315px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 350px) {
-  .products {
-    width: 290px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .card-product__img {
-    max-width: 100%;
-  }
-
-  .card-product__description {
-    width: 310px;
-    margin-top: -30px;
-    margin-left: -10px;
-    border: 3px solid #b59f5b;
-    padding: 40px 19px 24px;
   }
 }
