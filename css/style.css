@@ -1063,6 +1063,7 @@ body {
   .container {
     flex-direction: column;
     width: 90%;
+    margin-top: 40px;
   }
 
   .containers {
@@ -1102,6 +1103,10 @@ body {
   .container__2 {
     width: 100%;
     margin-top: 63px;
+  }
+  
+  .container__2-section {
+    margin-top: 40px;
   }
 
   .search-field {
