@@ -1,1 +1,1 @@
-# mq-diplom.github.io
+https://svetlanael12.github.io/mq-diplom/
