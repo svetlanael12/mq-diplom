@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>mq-diploma</title>
+    <title>mq-diplom</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="headers">
         <div class="logo">
-          <a href="#" class="logo-link">
+          <a href="#header" class="logo-link">
             <img
               class="header-logo"
               src="svg/noemi-logo.svg"
@@ -22,23 +22,35 @@
         </div>
         <div class="navigation">
           <nav class="nav">
-            <a href="#0" class="nav__link">Главная</a>
-            <a href="#0" class="nav__link">Посты</a>
-            <a href="#0" class="nav__link">Статьи</a>
-            <a href="#0" class="nav__link">Теги</a>
-            <a href="#0" class="nav__link">Темы</a>
-            <a href="#0" class="nav__link">Контакты</a>
+            <a href="#home" class="nav__link">Главная</a>
+            <a href="#posts" class="nav__link">Посты</a>
+            <a href="#articles" class="nav__link">Статьи</a>
+            <a href="#tags" class="nav__link">Теги</a>
+            <a href="#themes" class="nav__link">Темы</a>
+            <a href="#footer" class="nav__link">Контакты</a>
           </nav>
         </div>
         <div class="menu-burger">
           <button class="menu__button">
+            <span class="menu__button_after"></span>
             <span class="menu__button-label">открыть меню</span>
+            <span class="menu__button_before"></span>
           </button>
+        </div>
+        <div class="navigation-mobile popup-none">
+          <nav class="nav-mobile">
+            <a href="#home" class="nav__link_mob">Главная</a>
+            <a href="#posts" class="nav__link_mob">Посты</a>
+            <a href="#articles" class="nav__link_mob">Статьи</a>
+            <a href="#tags" class="nav__link_mob">Теги</a>
+            <a href="#themes" class="nav__link_mob">Темы</a>
+            <a href="#footer" class="nav__link_mob">Контакты</a>
+          </nav>
         </div>
       </div>
       <h1 class="header-title">Блог о творчестве, спорте, и образе жизни</h1>
     </header>
-    <section class="post-trend">
+    <section class="post-trend" id="home">
       <h3 class="post-trend__title new-post__title">Сейчас в тренде</h3>
       <article class="trend-blocks">
         <div class="block-trend trend-1">
@@ -108,8 +120,8 @@
         </div>
       </article>
     </section>
-    <div class="container">
-      <main class="containers">
+    <div class="container" id="posts">
+      <main class="containers" id="articles">
         <article class="entry">
           <figure class="entry__image">
             <img
@@ -440,7 +452,7 @@
             </button>
           </form>
         </section>
-        <section class="post-tegs container__2-section">
+        <section class="post-tegs container__2-section" id="tags">
           <h3 class="new-post__title title">Теги</h3>
           <ul class="post-tegs__list">
             <li class="post-tegs__item">
@@ -469,27 +481,32 @@
             </li>
           </ul>
         </section>
-        <section class="theme-post container__2-section">
+        <section class="theme-post container__2-section" id="themes">
           <h3 class="new-post__title title">Темы</h3>
           <ul class="theme-post__list">
             <li class="theme-post__item">
-              <a class="theme-post__link" href="#">Красота </a><span class="theme-post__span-text">12</span>
+              <a class="theme-post__link" href="#">Красота </a
+              ><span class="theme-post__span-text">12</span>
             </li>
             <li class="theme-post__item">
-              <a class="theme-post__link" href="#">Здоровье</a><span class="theme-post__span-text">4</span>
-              
+              <a class="theme-post__link" href="#">Здоровье</a
+              ><span class="theme-post__span-text">4</span>
             </li>
             <li class="theme-post__item">
-              <a class="theme-post__link" href="#">Образ жизни</a><span class="theme-post__span-text">145</span>
+              <a class="theme-post__link" href="#">Образ жизни</a
+              ><span class="theme-post__span-text">145</span>
             </li>
             <li class="theme-post__item">
-              <a class="theme-post__link" href="#">Музыка</a><span class="theme-post__span-text">28</span>  
+              <a class="theme-post__link" href="#">Музыка</a
+              ><span class="theme-post__span-text">28</span>
             </li>
             <li class="theme-post__item">
-              <a class="theme-post__link" href="#">Спорт</a><span class="theme-post__span-text">62</span>
+              <a class="theme-post__link" href="#">Спорт</a
+              ><span class="theme-post__span-text">62</span>
             </li>
             <li class="theme-post__item">
-              <a class="theme-post__link" href="#">Йога</a><span class="theme-post__span-text">8</span>
+              <a class="theme-post__link" href="#">Йога</a
+              ><span class="theme-post__span-text">8</span>
             </li>
           </ul>
         </section>
@@ -615,7 +632,7 @@
         </article>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <ul class="footer__list">
         <li class="footer__item">
           <a href="#0" class="footer__social-icon social-icon__twitter">
@@ -649,46 +666,77 @@
         >
       </div>
     </footer>
-    <!-- <section class="popup">
-          <div class="popup__container">
-            <span class="post-trend__title new-post__title">Ваш фидбек</span>
-            <form class="form">
-              <article class="form-group">
-                <label class="select-group">
-                  <span class="select-label">Как часто вы заходите на сайт?</span>
-                  <select class="select">
-                    <option value="moscow" selected>Почти каждый день</option>
-                    <option value="st-petersburg">Раз в несколько дней</option>
-                    <option value="kazan">Раз в несколько недель</option>
-                    <option value="kazan">Несколько раз в год</option>
-                  </select>
-                </label>
-              </article>
-              <article class="form-group">
-                <span class="select-label">Вы подписаны на e-mail рассылку?</span>
-                <div class="radio-group">
-                  <div class="radio">
-                    <input class="custom-radio" type="radio" id="answer-yes" name="answer" value="yes" checked>
-                    <label for="answer-yes" class="text-radio">Да</label>
-                  </div>
-                  <div class="radio">
-                    <input class="custom-radio" type="radio" id="answer-no" name="answer" value="no">
-                    <label for="answer-no" class="text-radio">Нет</label>
-                  </div>
-                </div>
-              </article>
-              <article class="form-group">
-                <label class="field-group">
-                  <span class="select-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-                  <textarea class="field textarea" placeholder="Может, больше рецептов?" required></textarea>
-                </label>
-              </article>
-              <article class="form-group form-actions">
-                <button class="button button-popup" type="submit">Сохранить</button>
-              </article>
-            </form>
-            <button class="popup__close" type="button">Закрыть окно</button>
-          </div>
-        </section> -->
+
+    <section class="popup popup-none">
+      <div class="popup__container">
+        <span class="post-trend__title new-post__title">Ваш фидбек</span>
+        <form class="form">
+          <article class="form-group">
+            <label class="select-group">
+              <span class="select-label">Как часто вы заходите на сайт?</span>
+              <select class="select">
+                <option value="moscow" selected>Почти каждый день</option>
+                <option value="st-petersburg">Раз в несколько дней</option>
+                <option value="kazan">Раз в несколько недель</option>
+                <option value="kazan">Несколько раз в год</option>
+              </select>
+            </label>
+          </article>
+          <article class="form-group">
+            <span class="select-label">Вы подписаны на e-mail рассылку?</span>
+            <div class="radio-group">
+              <div class="radio">
+                <input
+                  class="custom-radio"
+                  type="radio"
+                  id="answer-yes"
+                  name="answer"
+                  value="yes"
+                  checked
+                />
+                <label for="answer-yes" class="text-radio">Да</label>
+              </div>
+              <div class="radio">
+                <input
+                  class="custom-radio"
+                  type="radio"
+                  id="answer-no"
+                  name="answer"
+                  value="no"
+                />
+                <label for="answer-no" class="text-radio">Нет</label>
+              </div>
+            </div>
+          </article>
+          <article class="form-group">
+            <label class="field-group">
+              <span class="select-label"
+                >Расскажите, какой контент вы хотели бы видеть на нашем
+                сайте?</span
+              >
+              <textarea
+                class="field textarea"
+                placeholder="Может, больше рецептов?"
+                required
+              ></textarea>
+            </label>
+          </article>
+          <article class="form-group form-actions">
+            <button class="button button-popup" type="submit">Сохранить</button>
+          </article>
+        </form>
+        <div class="form-submit popup-none">
+          <p class="form-submit__text">Спасибо за отзыв!</p>
+        </div>
+        <button class="popup__close" type="button">Закрыть окно</button>
+      </div>
+    </section>
+
+    <button class="up-button popup-none" type="button">
+      ↑
+      <span class="visually-hidden">Наверх</span>
+    </button>
+
+    <script src="script/script.js"></script>
   </body>
 </html>
