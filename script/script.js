@@ -18,6 +18,9 @@ function Popup() {
 
     let submitForm = () => {
         popupSubmitBtn.addEventListener('click', function(){
+            let textarea = document.querySelector('.textarea');
+            textarea.value = '';
+            
             popupForm.classList.add('popup-none');
             popupSubmitForm.classList.remove('popup-none');
         })
